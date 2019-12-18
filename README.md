@@ -1,6 +1,6 @@
 # bedtohomeR
 
-A package to convert bed formated files into Homer Ready txt format on Mac.
+An R package to convert bed formated files into Homer Ready txt format on Mac.
 
 
 ### Installation:
@@ -17,7 +17,7 @@ install_github("eonurk/bedtohomeR")
 ```r
 bed_to_homer(bed, "path/to/homer_ready_file.txt")
 ```
-this will create a file with UniqueIDs and add "." for strands.
+this will create a file with uniqueIDs and add "." for strands.
 
 Then, you can go to terminal and use this file:
 
