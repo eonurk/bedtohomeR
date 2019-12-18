@@ -2,16 +2,6 @@
 
 A package to convert bed formated files into Homer Ready txt format on Mac.
 
-### Usage
-```r
-bed_to_homer(bed, "path/to/homer_ready_file.txt")
-```
-after saving file go to terminal,
-
-```bash
-annotatePeaks.pl path/to/homer_ready_file.txt <genome> > output.txt
-```
-For more information: [Homer Manual](http://homer.ucsd.edu/homer/ngs/annotation.html)
 
 ### Installation:
 ```r 
@@ -21,6 +11,20 @@ then,
 ```r
 install_github("eonurk/bedtohomeR")
 ```
+
+### Usage
+
+```r
+bed_to_homer(bed, "path/to/homer_ready_file.txt")
+```
+this will create a file with UniqueIDs and add "." for strands.
+
+Then, you can go to terminal and use this file:
+
+```bash
+annotatePeaks.pl path/to/homer_ready_file.txt <genome> > output.txt
+```
+For more information: [Homer Manual](http://homer.ucsd.edu/homer/ngs/annotation.html)
 
 ## License
 

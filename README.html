@@ -367,19 +367,20 @@ summary {
 
 <div id="bedtohomer" class="section level1">
 <h1>bedtohomeR</h1>
-<p>A package to convert bed formated files into Homer Ready txt format.</p>
-<div id="usage" class="section level3">
-<h3>Usage</h3>
-<pre class="r"><code>bed_to_homer(bed, &quot;path/to/homer_ready_file.txt&quot;)</code></pre>
-<p>after saving file go to terminal,</p>
-<pre class="bash"><code>annotatePeaks.pl path/to/homer_ready_file.txt &lt;genome&gt; &gt; output.txt</code></pre>
-<p>For more information: <a href="http://homer.ucsd.edu/homer/ngs/annotation.html">homer manual</a></p>
-</div>
+<p>A package to convert bed formated files into Homer Ready txt format on Mac.</p>
 <div id="installation" class="section level3">
 <h3>Installation:</h3>
 <pre class="r"><code>library(devtools) # install.packages(&quot;devtools&quot;)</code></pre>
 <p>then,</p>
-<pre class="r"><code>install_github(&quot;eonurk/useR&quot;)</code></pre>
+<pre class="r"><code>install_github(&quot;eonurk/bedtohomeR&quot;)</code></pre>
+</div>
+<div id="usage" class="section level3">
+<h3>Usage</h3>
+<pre class="r"><code>bed_to_homer(bed, &quot;path/to/homer_ready_file.txt&quot;)</code></pre>
+<p>this will create a file with UniqueIDs and add “.” for strands.</p>
+<p>Then, you can go to terminal and use this file:</p>
+<pre class="bash"><code>annotatePeaks.pl path/to/homer_ready_file.txt &lt;genome&gt; &gt; output.txt</code></pre>
+<p>For more information: <a href="http://homer.ucsd.edu/homer/ngs/annotation.html">Homer Manual</a></p>
 </div>
 <div id="license" class="section level2">
 <h2>License</h2>
