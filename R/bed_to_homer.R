@@ -21,7 +21,7 @@ bed_to_homer <- function(bed, filename){
   chrList <- list()
   uniqueID <- list()
   counter <- 0 # this code is really bad. I am sorry!
-  for (col in as.character((unlist(peaks[["CHR"]])))){
+  for (col in as.character((unlist(meta[,1])))){
     
     if (is.null(chrList[[(col)]])){
       chrList[[(col)]] <- 1
@@ -32,7 +32,7 @@ bed_to_homer <- function(bed, filename){
     uniqueID[[counter]] <- chrList[[(col)]]
   }
   
-  tbl <- peaks %>% mutate(Strand = ".", UniqueID=paste0(CHR,"-",uniqueID %>% unlist)) %>% 
+  tbl <- meta %>% mutate(Strand = ".", UniqueID=paste0(CHR,"-",uniqueID %>% unlist)) %>% 
     select(UniqueID, everything())
   write.table(x = tbl, file = filename,
               sep = "\t", row.names = FALSE,quote= FALSE, col.names = TRUE)
