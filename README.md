@@ -5,6 +5,7 @@ An R package to convert bed formated files into Homer Ready txt format on Mac.
 
 ### Installation:
 ```r 
+library(dplyr) # install.packages("dplyr")
 library(devtools) # install.packages("devtools")
 ```
 then,
