@@ -1,0 +1,10 @@
+Package: bedtohomeR
+Version: 0.1
+Date: 2019-12-18
+Title: Bed to Homer on Mac
+Description: Convert bed formatted files into Homer Ready txt files
+Author: EO Karakaslar
+Maintainer: EO Karakaslar <eonurkara@gmail.com>
+License: GPL-3
+Encoding: UTF-8
+RoxygenNote: 7.0.2
