@@ -9,8 +9,10 @@
 #' bed_to_homer("path/to/file", "path/to/save")
 #' 
 #' @export
+
 bed_to_homer <- function(bed, filename){
-  
+
+  options(scipen=999) # prevent scientific notation because it may cause problems.
   meta <- bed [,c(1:3)]
   if (nrow(meta) <= 0) {
       stop("Couldn't parse bed file!")
